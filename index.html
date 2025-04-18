@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="weather-card">
+      <form id="search-form" class="search-form">
+        <input 
+          type="text" 
+          id="city-input" 
+          placeholder="Enter city name..."
+        >
+        <button type="submit">
+          <i data-lucide="search"></i>
+        </button>
+      </form>
+
+      <div id="loading" class="loading hidden">
+        <i data-lucide="loader-2"></i>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <div id="weather-info" class="weather-info">
+        <div class="weather-main">
+          <h1 id="city-name" class="city-name">Loading...</h1>
+          <p id="temperature" class="temperature">--°C</p>
+          <p id="description" class="description">--</p>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-card">
+            <i data-lucide="thermometer"></i>
+            <div>
+              <p class="label">Feels Like</p>
+              <p id="feels-like" class="value">--°C</p>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <i data-lucide="droplets"></i>
+            <div>
+              <p class="label">Humidity</p>
+              <p id="humidity" class="value">--%</p>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <i data-lucide="wind"></i>
+            <div>
+              <p class="label">Wind Speed</p>
+              <p id="wind-speed" class="value">-- m/s</p>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <i data-lucide="cloud"></i>
+            <div>
+              <p class="label">Condition</p>
+              <p id="condition" class="value">--</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

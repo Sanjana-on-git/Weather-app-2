@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #60a5fa, #1e40af);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+}
+
+.search-form {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-right: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.search-form button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: color 0.2s;
+}
+
+.search-form button:hover {
+  color: #3b82f6;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.loading i {
+  animation: spin 1s linear infinite;
+  color: #3b82f6;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.weather-main {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.city-name {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 0.25rem;
+}
+
+.description {
+  color: #4b5563;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.detail-card {
+  background: #eff6ff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.detail-card i {
+  color: #3b82f6;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.value {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hidden {
+  display: none;
+}
