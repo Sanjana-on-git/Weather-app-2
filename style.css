@@ -148,3 +148,25 @@ body {
 .hidden {
   display: none;
 }
+.clouds {
+  background: url('cloud.png') repeat-x;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100vh;
+  animation: moveClouds 60s linear infinite;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-66.6%); }
+}
+
+body, .weather-card {
+  position: relative;
+  z-index: 1;
+}
